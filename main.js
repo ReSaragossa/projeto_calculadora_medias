@@ -31,25 +31,25 @@ function adicionaLinha() {                                                      
         let linha = '<tr>';                                                                         //adicionar informações na tabela como se fosse uma linha
         linha += `<td>${inputNomeAtividade.value}</td>`;                                            //concatenação
         linha += `<td>${inputNotaAtividade.value}</td>`;
-        linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`;          //essa é a função de IF(?) e THEN(:) - Se maior que 7, então aprovado
+        linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`; //essa é a função de IF(?) e THEN(:) - Se maior que 7, então aprovado
         linha += '</tr>';
 
         linhas += linha;
     }
 
-    inputNomeAtividade.value = '';                                                              //comando para limpar os campos depois de clicar em submit
+    inputNomeAtividade.value = '';                                                                  //comando para limpar os campos depois de clicar em submit
     inputNotaAtividade.value = '';
 }
 
 function atualizarTabela() {
-    const  corpoTabela = document.querySelector('tbody');                                       //colocar o conteúdo dentro da tabela
-    corpoTabela.innerHTML = linhas;                                                             //inserir conteúdo dentro de uma TAG    
+    const  corpoTabela = document.querySelector('tbody');                                           //colocar o conteúdo dentro da tabela
+    corpoTabela.innerHTML = linhas;                                                                 //inserir conteúdo dentro de uma TAG    
 }
 
-function atualizaMediaFinal() {                                                                 //função para atualizar a média final
+function atualizaMediaFinal() {                                                                     //função para atualizar a média final
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
