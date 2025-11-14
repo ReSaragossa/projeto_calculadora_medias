@@ -1,0 +1,97 @@
+* {                                         /*reset geral, tudo o que não estiver dentro de outros comandos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {                                      /*alterações no corpo do site*/
+    background-color: #e7e7e7;
+    padding-top: 100px;                     /*espaço entre o topo do site e o conteúdo*/
+}
+
+header {                                    /*alteração do header*/
+    display: flex;                          /*elementos um ao lado do outro*/
+    align-items: center;                    /*elementos centralizados na página - vertical*/  
+    margin-bottom: 40px;                    /*afastar o header do formulário*/  
+}
+
+header img {                                /*tamanho do logo que está no header*/            
+    height: 36px;                           /*tamanho da imagem*/
+    margin-right: 16px;                     /*margem direita*/
+}
+
+header h1 {                                 /*alterar conteúdo H1 - título da tabela*/    
+    font-size: 40px;
+    font-weight: bold;                      /*alterar estilo da fonte - BOLD*/
+}
+
+.container {                                /*ediçao do cabeçalho, form e tabela*/
+    max-width: 960px;                       /*tamanho total do container*/
+    width: 100%;                            /*quanto de espaço ele vai utilizar*/
+    margin: 0 auto;                         /*centralizar o container na horizontal*/
+}
+
+form {
+    display: flex;                          /*mescla os campos como se fosse uma unica linha*/
+    max-width: 640px;                       /*define uma área máxima para os elementos*/
+    width: 100%;
+    justify-content: space-between;         /*justificar espaço entre os elementos*/
+    margin-bottom: 56px;                    /*margem enttre o formulário e a tabela*/    
+}
+
+form input{                                 /*alteração nos campos do formulário*/
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;     
+    padding: 8px;                           /*espaço entre os elementos*/
+}
+
+form button {                               /*alterações no BOTÃO do formulário*/
+    background-color: #009432;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+table {                                     /*alterações na tabela em si*/
+    width: 100%;
+}
+
+table th {                                  /*alterações no cabeçalho da tabela*/
+    border-bottom: 2px solid black;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table td {                                  /*alterações na coluna da tabela: conteúdos e espaçamentos*/
+    padding: 16px 0;                        /*espaçamento apenas na parte inferior e superior*/
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);       /*linha de separação da tabela - RGBA: utiliza transparência*/ 
+}
+
+table td img {                              /*alterações na imagem da tabela*/
+    height: 50px;
+}
+
+.resultado {                                /*estilizando os textos de aprovado e reprovado*/
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.aprovado {                                 /*regra criada para mostrar mensagem de aprovação*/
+    background-color: #009432;            /*cor de fundo da mensagem de aprovação - <span class="resultado aprovado">*/
+}
+
+.reprovado {                                /*regra criada para mostrar mensagem de reprovação*/
+    background-color: red;                /*cor de fundo da mensagem de reprovação - <span class="resultado reprovado">*/
+}
